@@ -993,6 +993,7 @@
     <Content Include="Views\adduser.html" />
     <Content Include="Views\changepassword.html" />
     <Content Include="Views\login.html" />
+    <Content Include="Views\maintenanceusers.html" />
     <Content Include="Views\nav.html" />
     <Content Include="Views\register.html" />
     <Content Include="Views\success.html" />

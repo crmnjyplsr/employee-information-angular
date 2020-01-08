@@ -170,7 +170,7 @@ a.small {
 
 /* Form Styles */
 
-input {
+input, select {
     width: 100%;
     display: inline-block;
     font-weight: 100;

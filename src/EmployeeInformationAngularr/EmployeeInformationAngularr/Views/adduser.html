@@ -9,10 +9,17 @@
         <p class="message" ng-show="message">{{ message }}</p>-->
         </div>
 
-        <!-- Employee Information -->
-        <fieldset>
 
-            <!-- TODO: Employee Status dropdown -->
+        <div>
+            <!-- Employee Information -->
+            <!-- TODO: Employee Status dropdown --><!-- Partially done -->
+
+            <label for="employeestatus">Employee Status: </label>
+            <select id="employeestatus">
+                <option value=""></option>
+                <option value="regular">Regular</option>
+                <option value="trainee">Trainee</option>
+            </select>
 
             <label for="employeeid">Employee Id: </label>
             <input type="text" name="employeeid" id="employeeid" placeholder="XXXX"
@@ -43,10 +50,11 @@
             <!-- TODO: Effective date (To) -->
             <!-- TODO: Signature -->
 
-        </fieldset>
+        </div><!-- End of Employee Information -->
 
-        <!-- Login Information -->
-        <fieldset>
+
+        <div>
+            <!-- Login Information -->
 
             <label for="username">UserName: </label>
             <input type="text" name="username" id="username"
@@ -88,13 +96,20 @@
                 Confirm Password is required
             </p>
 
-        </fieldset>
+        </div><!-- End of Login Information -->
 
-        <!-- Contact Details -->
-        <fieldset>
 
+        <div>
+            <!-- Contact Details -->
             <!-- TODO: Upload image -->
-            <!-- TODO: Dropdown Mr. , Mrs. , Ms. -->
+            <!-- TODO: Dropdown Mr. , Mrs. , Ms. --><!-- Partially done -->
+
+            <select id="honorifics">
+                <option value=""></option>
+                <option value="mr">Mr. </option>
+                <option value="ms">Ms. </option>
+                <option value="mrs">Mrs. </option>
+            </select>
 
             <label for="firstname">First Name: </label>
             <input type="text" name="firstname" id="firstname"
@@ -148,7 +163,7 @@
                 Contact No. is required
             </p>
 
-        </fieldset>
+        </div><!-- End of Contact Details -->
 
         <button type="submit" class="btn"
                 ng-disabled="myform.$invalid">
