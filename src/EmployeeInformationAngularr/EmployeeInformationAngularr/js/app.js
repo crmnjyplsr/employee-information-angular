@@ -26,11 +26,11 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         }).
         when('/changepassword', {
             templateUrl: 'views/changepassword.html',
-            //controller: 
+            //controller: TODO : Change Password controller
         }). //changepassword
         when('/adduser', {
             templateUrl: 'views/adduser.html',
-            //controller: 
+            //controller: TODO : Add User controller
         }). //adduser
 
         when('/success', {

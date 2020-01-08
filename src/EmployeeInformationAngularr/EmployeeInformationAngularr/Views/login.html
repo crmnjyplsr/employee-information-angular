@@ -11,18 +11,20 @@
         </div>
 
         <fieldset>
-            <input type="email" name="email" placeholder="Email"
-                   ng-model="user.email" ng-required="true">
+            <!-- TODO change from email to username -->
+            <label for="username" class="text-info">Username </label>
+            <input type="text" name="username" id="username"
+                   ng-model="user.username" ng-required="true">
             <p class="error validationerror"
-               ng-show="myform.email.$invalid && myform.email.$touched">
-                Must be a valid email
+               ng-show="myform.username.$invalid && myform.username.$touched">
+                Username is required
             </p>
 
-
-            <input type="password" name="password" placeholder="Password"
+            <label for="password">Password </label>
+            <input type="password" name="password" id="password"
                    ng-model="user.password" ng-required="true">
             <p class="error validationerror"
-               ng-show="myform.password.$invalid && myform.email.$touched">
+               ng-show="myform.password.$invalid && myform.password.$touched">
                 Password is required
             </p>
 
@@ -30,10 +32,11 @@
 
         <button type="submit" class="btn"
                 ng-disabled="myform.$invalid">
-            Login
+            Log in
         </button>
         <p>or <a ng-href="http://localhost:8080/#!/register">register</a></p>
         <p>or <a ng-href="http://localhost:8080/#!/changepassword">change password</a></p>
+        <p>or <a ng-href="http://localhost:8080/#!/adduser">add user</a></p>
         <!--<p>or <a ng-href="#/register">register</a></p> old way-->
     </form>
 </section>

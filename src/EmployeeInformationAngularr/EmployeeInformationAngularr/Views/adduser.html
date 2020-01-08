@@ -1,10 +1,159 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿<section class="card adduser">
+    <form name="myform"
+          ng-submit="adduser()"
+          novalidate>
 
-</body>
-</html>
+        <div class="textintro">
+            <h1>ADD USERS</h1>
+            <!--<p>To access site features</p>
+        <p class="message" ng-show="message">{{ message }}</p>-->
+        </div>
+
+        <!-- Employee Information -->
+        <fieldset>
+
+            <!-- TODO: Employee Status dropdown -->
+
+            <label for="employeeid">Employee Id: </label>
+            <input type="text" name="employeeid" id="employeeid" placeholder="XXXX"
+                   ng-model="user.employeeid" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.employeeid.$invalid && myform.employeeid.$touched">
+                Employee ID is required
+            </p>
+
+            <label for="sssnumber">SSS Number: </label>
+            <input type="text" name="sssnumber" id="sssnumber" placeholder="XX-XXXXXXX-X"
+                   ng-model="user.sssnumber" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.sssnumber.$invalid && myform.sssnumber.$touched">
+                SSS Number is required
+            </p>
+
+            <label for="tinnumber">TIN Number: </label>
+            <input type="text" name="tinnumber" id="tinnumber" placeholder="XXX-XXX-XXX"
+                   ng-model="user.tinnumber" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.tinnumber.$invalid && myform.tinnumber.$touched">
+                TIN Number is required
+            </p>
+
+            <!-- TODO: Date Employed -->
+            <!-- TODO: Effective date (From) -->
+            <!-- TODO: Effective date (To) -->
+            <!-- TODO: Signature -->
+
+        </fieldset>
+
+        <!-- Login Information -->
+        <fieldset>
+
+            <label for="username">UserName: </label>
+            <input type="text" name="username" id="username"
+                   ng-model="user.username" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.username.$invalid && myform.username.$touched">
+                UserName is required
+            </p>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"
+                   ng-model="user.email" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.email.$invalid && myform.email.$touched">
+                Invalid Email
+            </p>
+
+            <label for="confirmemail">Confirm Email: </label>
+            <input type="email" name="confirmemail" id="confirmemail"
+                   ng-model="user.confirmemail" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.confirmemail.$invalid && myform.confirmemail.$touched">
+                Invalid Email
+            </p>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password"
+                   ng-model="user.password" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.password.$invalid && myform.password.$touched">
+                Password is required
+            </p>
+
+            <label for="confirmpassword">Confirm Password: </label>
+            <input type="password" name="confirmpassword" id="confirmpassword"
+                   ng-model="user.confirmpassword" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.confirmpassword.$invalid && myform.confirmpassword.$touched">
+                Confirm Password is required
+            </p>
+
+        </fieldset>
+
+        <!-- Contact Details -->
+        <fieldset>
+
+            <!-- TODO: Upload image -->
+            <!-- TODO: Dropdown Mr. , Mrs. , Ms. -->
+
+            <label for="firstname">First Name: </label>
+            <input type="text" name="firstname" id="firstname"
+                   ng-model="user.firstname" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+                First Name is required
+            </p>
+
+            <label for="middlename">Middle Name: </label>
+            <input type="text" name="middlename" id="middlename"
+                   ng-model="user.middlename" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.middlename.$invalid && myform.middlename.$touched">
+                Middle Name is required
+            </p>
+
+            <label for="lastname">Last Name: </label>
+            <input type="text" name="lastname" id="lastname"
+                   ng-model="user.lastname" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+                Last Name is required
+            </p>
+
+            <!-- TODO: Date of Birth -->
+
+            <p>In case of emergency, please notify: </p>
+
+            <label for="emergencyname">Name: </label>
+            <input type="text" name="emergencyname" id="emergencyname"
+                   ng-model="user.emergencyname" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.emergencyname.$invalid && myform.emergencyname.$touched">
+                Name is required
+            </p>
+
+            <label for="emergencyaddress">Address: </label>
+            <input type="text" name="emergencyaddress" id="emergencyaddress"
+                   ng-model="user.emergencyaddress" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.emergencyaddress.$invalid && myform.emergencyaddress.$touched">
+                Address is required
+            </p>
+
+            <label for="emergencycontact">Contact No.: </label>
+            <input type="text" name="emergencycontact" id="emergencycontact"
+                   ng-model="user.emergencycontact" ng-required="true">
+            <p class="error validationerror"
+               ng-show="myform.emergencycontact.$invalid && myform.emergencycontact.$touched">
+                Contact No. is required
+            </p>
+
+        </fieldset>
+
+        <button type="submit" class="btn"
+                ng-disabled="myform.$invalid">
+            Create
+        </button>
+        <p>or <a ng-href="#/login">login</a></p>
+    </form>
+</section>
