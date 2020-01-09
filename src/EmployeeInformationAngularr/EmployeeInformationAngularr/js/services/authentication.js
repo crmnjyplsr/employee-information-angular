@@ -92,7 +92,7 @@
                     }).catch(function (error) {
                         $rootScope.message = error.message;
                     }); // //createUser
-                } // register
+                } // adduser
             };
 
             return myObject;

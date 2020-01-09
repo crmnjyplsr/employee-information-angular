@@ -1,6 +1,11 @@
 ﻿var myApp = angular.module('myApp',
     ['ngRoute', 'firebase'])
-    .constant('FIREBASE_URL', 'https://angreg77.firebaseIO.com/');
+    .constant('FIREBASE_URL', 'https://angularregistration07-35546.firebaseio.com/');
+
+//old
+//var myApp = angular.module('myApp',
+//    ['ngRoute', 'firebase'])
+//    .constant('FIREBASE_URL', 'https://angreg77.firebaseIO.com/');
 
 
 myApp.run(['$rootScope', '$location',
