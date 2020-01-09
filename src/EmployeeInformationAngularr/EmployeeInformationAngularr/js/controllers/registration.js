@@ -10,8 +10,13 @@
                 Authentication.logout();
             }; //logout
 
-            $scope.register = function () {
-                Authentication.register($scope.user);
-            }; // register
+            //$scope.register = function () {
+            //    Authentication.register($scope.user);
+            //}; // register
+
+            $scope.adduser = function () {
+                Authentication.adduser($scope.user);
+            }; // adduser
+
 
         }]); // Controller

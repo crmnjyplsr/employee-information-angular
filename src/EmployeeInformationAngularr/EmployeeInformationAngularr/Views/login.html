@@ -12,15 +12,16 @@
 
         <fieldset>
             <!-- TODO change from email to username -->
-            <label for="username">Username </label>
-            <input type="text" name="username" id="username"
-                   ng-model="user.username" ng-required="true">
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"
+                   ng-model="user.email" ng-required="true">
             <p class="error validationerror"
-               ng-show="myform.username.$invalid && myform.username.$touched">
-                Username is required
+               ng-show="myform.email.$invalid && myform.email.$touched">
+                Must be a valid email
             </p>
 
-            <label for="password">Password </label>
+            <label for="password">Password: </label>
             <input type="password" name="password" id="password"
                    ng-model="user.password" ng-required="true">
             <p class="error validationerror"
@@ -37,6 +38,7 @@
         <p>or <a ng-href="http://localhost:8080/#!/register">register</a></p>
         <p>or <a ng-href="http://localhost:8080/#!/changepassword">change password</a></p>
         <p>or <a ng-href="http://localhost:8080/#!/adduser">add user</a></p>
+        <p>or <a ng-href="http://localhost:8080/#!/maintenanceusers">maintenance user</a></p>
         <!--<p>or <a ng-href="#/register">register</a></p> old way-->
     </form>
 </section>

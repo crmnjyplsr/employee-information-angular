@@ -38,7 +38,29 @@
                     return auth.$requireAuth();
                 }, //require Authentication
 
-                register: function (user) {
+                //register: function (user) {
+                //    auth.$createUser({
+                //        email: user.email,
+                //        password: user.password
+                //    }).then(function (regUser) {
+
+                //        var regRef = new Firebase(FIREBASE_URL + 'users')
+                //            .child(regUser.uid).set({
+                //                date: Firebase.ServerValue.TIMESTAMP,
+                //                regUser: regUser.uid,
+                //                firstname: user.firstname,
+                //                lastname: user.lastname,
+                //                email: user.email
+                //            }); //user info
+
+                //        myObject.login(user);
+
+                //    }).catch(function (error) {
+                //        $rootScope.message = error.message;
+                //    }); // //createUser
+                //} // register
+
+                    adduser: function (user) {
                     auth.$createUser({
                         email: user.email,
                         password: user.password
@@ -48,9 +70,21 @@
                             .child(regUser.uid).set({
                                 date: Firebase.ServerValue.TIMESTAMP,
                                 regUser: regUser.uid,
+                                employeestatus: user.employeestatus,
+                                employeeid: user.employeeid,
+                                sssnumber: user.sssnumber,
+                                tinnumber: user.tinnumber,
+                                username: user.username,
+                                email: user.email,
+                                password: user.password,
+                                honorifics: user.honorifics,
                                 firstname: user.firstname,
+                                middlename: user.middlename,
                                 lastname: user.lastname,
-                                email: user.email
+                                emergencyname: user.emergencyname,
+                                emergencyaddress: user.emergencyaddress,
+                                emergencycontact: user.emergencycontact
+
                             }); //user info
 
                         myObject.login(user);

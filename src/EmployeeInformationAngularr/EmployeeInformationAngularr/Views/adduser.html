@@ -10,16 +10,23 @@
         </div>
 
 
-        <div>
-            <!-- Employee Information -->
-            <!-- TODO: Employee Status dropdown --><!-- Partially done -->
+        <!-- START of Employee Information -->
+        <h2>Employee Information</h2>
+        <!-- TODO: Employee Status dropdown --><!-- Partially done -->
+
 
             <label for="employeestatus">Employee Status: </label>
-            <select id="employeestatus">
+            <select id="employeestatus" ng-model="user.employeestatus" ng-required="true">
                 <option value=""></option>
                 <option value="regular">Regular</option>
                 <option value="trainee">Trainee</option>
             </select>
+            <p class="error validationerror"
+               ng-show="myform.employeestatus.$invalid && myform.employeestatus.$touched">
+                Employee Status is required
+            </p>
+
+
 
             <label for="employeeid">Employee Id: </label>
             <input type="text" name="employeeid" id="employeeid" placeholder="XXXX"
@@ -29,6 +36,8 @@
                 Employee ID is required
             </p>
 
+
+
             <label for="sssnumber">SSS Number: </label>
             <input type="text" name="sssnumber" id="sssnumber" placeholder="XX-XXXXXXX-X"
                    ng-model="user.sssnumber" ng-required="true">
@@ -36,6 +45,8 @@
                ng-show="myform.sssnumber.$invalid && myform.sssnumber.$touched">
                 SSS Number is required
             </p>
+
+
 
             <label for="tinnumber">TIN Number: </label>
             <input type="text" name="tinnumber" id="tinnumber" placeholder="XXX-XXX-XXX"
@@ -45,16 +56,15 @@
                 TIN Number is required
             </p>
 
-            <!-- TODO: Date Employed -->
-            <!-- TODO: Effective date (From) -->
-            <!-- TODO: Effective date (To) -->
-            <!-- TODO: Signature -->
 
-        </div><!-- End of Employee Information -->
+        <!-- TODO: Date Employed -->
+        <!-- TODO: Effective date (From) -->
+        <!-- TODO: Effective date (To) -->
+        <!-- TODO: Signature -->
+        <!-- END of Employee Information -->
+        <!-- START of Login Information -->
+        <h2>Login Information</h2>
 
-
-        <div>
-            <!-- Login Information -->
 
             <label for="username">UserName: </label>
             <input type="text" name="username" id="username"
@@ -64,6 +74,9 @@
                 UserName is required
             </p>
 
+
+
+
             <label for="email">Email: </label>
             <input type="email" name="email" id="email"
                    ng-model="user.email" ng-required="true">
@@ -71,6 +84,8 @@
                ng-show="myform.email.$invalid && myform.email.$touched">
                 Invalid Email
             </p>
+
+
 
             <label for="confirmemail">Confirm Email: </label>
             <input type="email" name="confirmemail" id="confirmemail"
@@ -80,6 +95,8 @@
                 Invalid Email
             </p>
 
+
+
             <label for="password">Password: </label>
             <input type="password" name="password" id="password"
                    ng-model="user.password" ng-required="true">
@@ -87,6 +104,8 @@
                ng-show="myform.password.$invalid && myform.password.$touched">
                 Password is required
             </p>
+
+
 
             <label for="confirmpassword">Confirm Password: </label>
             <input type="password" name="confirmpassword" id="confirmpassword"
@@ -96,20 +115,23 @@
                 Confirm Password is required
             </p>
 
-        </div><!-- End of Login Information -->
 
 
-        <div>
-            <!-- Contact Details -->
-            <!-- TODO: Upload image -->
-            <!-- TODO: Dropdown Mr. , Mrs. , Ms. --><!-- Partially done -->
+        <!-- END of Login Information -->
+        <!-- START of Contact Details -->
+        <h2>Contact Details</h2>
+        <!-- TODO: Upload image -->
+        <!-- TODO: Dropdown Mr. , Mrs. , Ms. --><!-- Partially done -->
 
-            <select id="honorifics">
+
+            <select id="honorifics" ng-model="user.honorifics" ng-required="true">
                 <option value=""></option>
                 <option value="mr">Mr. </option>
                 <option value="ms">Ms. </option>
                 <option value="mrs">Mrs. </option>
             </select>
+
+
 
             <label for="firstname">First Name: </label>
             <input type="text" name="firstname" id="firstname"
@@ -119,6 +141,8 @@
                 First Name is required
             </p>
 
+
+
             <label for="middlename">Middle Name: </label>
             <input type="text" name="middlename" id="middlename"
                    ng-model="user.middlename" ng-required="true">
@@ -126,6 +150,9 @@
                ng-show="myform.middlename.$invalid && myform.middlename.$touched">
                 Middle Name is required
             </p>
+
+
+
 
             <label for="lastname">Last Name: </label>
             <input type="text" name="lastname" id="lastname"
@@ -135,9 +162,12 @@
                 Last Name is required
             </p>
 
-            <!-- TODO: Date of Birth -->
 
-            <p>In case of emergency, please notify: </p>
+
+        <!-- TODO: Date of Birth -->
+
+        <p>In case of emergency, please notify: </p>
+
 
             <label for="emergencyname">Name: </label>
             <input type="text" name="emergencyname" id="emergencyname"
@@ -147,6 +177,8 @@
                 Name is required
             </p>
 
+
+
             <label for="emergencyaddress">Address: </label>
             <input type="text" name="emergencyaddress" id="emergencyaddress"
                    ng-model="user.emergencyaddress" ng-required="true">
@@ -155,20 +187,26 @@
                 Address is required
             </p>
 
+
+
             <label for="emergencycontact">Contact No.: </label>
-            <input type="text" name="emergencycontact" id="emergencycontact"
-                   ng-model="user.emergencycontact" ng-required="true">
-            <p class="error validationerror"
-               ng-show="myform.emergencycontact.$invalid && myform.emergencycontact.$touched">
-                Contact No. is required
-            </p>
+                <input type="text" name="emergencycontact" id="emergencycontact"
+                       ng-model="user.emergencycontact" ng-required="true">
+                <p class="error validationerror"
+                   ng-show="myform.emergencycontact.$invalid && myform.emergencycontact.$touched">
+                    Contact No. is required
+                </p>
 
-        </div><!-- End of Contact Details -->
 
-        <button type="submit" class="btn"
-                ng-disabled="myform.$invalid">
-            Create
-        </button>
-        <p>or <a ng-href="#/login">login</a></p>
-    </form>
+
+
+            <!-- END of Contact Details -->
+
+
+            <button type="submit" class="btn"
+                    ng-disabled="myform.$invalid">
+                Create
+            </button>
+            <p>or <a ng-href="#/login">login</a></p>
+</form>
 </section>

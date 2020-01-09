@@ -20,19 +20,22 @@ myApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/login.html',
             controller: 'RegistrationController'
         }).
-        when('/register', {
-            templateUrl: 'views/register.html',
-            controller: 'RegistrationController'
-        }).
+        //when('/register', {
+        //    templateUrl: 'views/register.html',
+        //    controller: 'RegistrationController'
+        //}).
         when('/changepassword', {
             templateUrl: 'views/changepassword.html',
             //controller: TODO : Change Password controller
         }). //changepassword
         when('/adduser', {
             templateUrl: 'views/adduser.html',
-            //controller: TODO : Add User controller
+            controller: 'RegistrationController'
         }). //adduser
-
+        when('/maintenanceusers', {
+            templateUrl: 'views/maintenanceusers.html',
+            //controller: TODO : Maintenance User controller
+        }). //maintenanceusers
         when('/success', {
             templateUrl: 'views/success.html',
             controller: 'SuccessController',

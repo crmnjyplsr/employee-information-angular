@@ -1,10 +1,34 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿<section class="card maintenanceusers">
+    <form name="myform"
+          ng-submit="maintenanceusers()"
+          novalidate>
 
-</body>
-</html>
+
+        <h1>MAINTENANCE USERS</h1>
+
+        <button type="submit" class="btn">
+            Add New User
+        </button>
+
+        <div>
+            <label for="searchby">SEARCH BY</label>
+            <select id="searchby">
+                <option value="username">Username</option>
+                <option value="name">Name</option>
+                <option value="email">Email</option>
+                <option value="email">Mobile Number</option>
+                <option value="email">User Status</option>
+            </select>
+            <input type="text">
+        </div>
+        <div>
+            <button type="submit" class="btn">
+                SEARCH
+            </button>
+            <button type="submit" class="btn">
+                CLEAR
+            </button>
+        </div>
+
+    </form>
+</section>
